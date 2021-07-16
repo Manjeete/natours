@@ -22,6 +22,7 @@ router
     .post(tourController.createTour);
 
 router
+    //detail router
     .route('/:id')
     .get(tourController.getTour)
     .patch(tourController.updateTour)
