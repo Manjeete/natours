@@ -9,7 +9,7 @@ dotenv.config({path:'./config.env'});
 mongoose.connect(process.env.DATABASE_CLOUD,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:false,useUnifiedTopology: true })
 .then(() => console.log('DB Connected...'))
 
-const tours = JSON.parse(fs.readFileSync(__dirname+'/tour-simple.json','utf-8'));
+const tours = JSON.parse(fs.readFileSync(__dirname+'/tours.json','utf-8'));
 
 // Import data into db
 const importData = async () =>{
