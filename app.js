@@ -15,6 +15,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 const AppError = require('./utils/appError');
 
 const globalErrorHandler = require('./controllers/errorController');
+const compression = require('compression');
 
 const app = express();
 
@@ -69,7 +70,7 @@ app.use(hpp({
 //     next();
 // });
 
-
+app.use(compression());
 
 //test middlerware
 app.use((req,res,next) =>{
